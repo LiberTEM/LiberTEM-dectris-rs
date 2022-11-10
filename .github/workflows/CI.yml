@@ -11,6 +11,8 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: recursive
+    - name: Rust version info
+      run: rustc --version -v
     - name: Run tests
       run: cargo test --verbose
     - uses: messense/maturin-action@v1
